@@ -1,0 +1,13 @@
+PART B IMPLEMENTATION:
+~~~~~~~~~~~~~~~~~~~~~
+
+1) From each root server, query the A records of the website and also the DNSKEY record.
+2) Gather ZSK,KSK(DNSKEY RRSET) and RRSIG of the DNSKEY RRSET from the DNSKEY query and validate the ZSK received.
+3) Next, Gather NS RRSET, DS RRSET and RRSIG of the DS RRSET and the validate the authenticity of the NSRRSET received.
+4) If this is root server that is being queried, then check the KSK received with KSK stored in the local system.
+5) Else, hash the canonical name with KSK and validate if the digest produced is same as in the DS record provided to us by the parent server.
+6) Now, if all the validations go through successfully, if we have received the answer then we will return it.
+7) Else, if the parent server has suggested to query from other servers in the authority section, then query the child server that parent suggested. The parent server will also provide
+the DS record which should be used to verify the chain of trust at the child level. If parent does not provide with DS record and respond back with NSEC3 record, may be that child does not
+support DNSSEC. The NSEC3 record should also be validated with NSEC3 RRSIG record and ZSK.
+8) Now, repeat the same steps from 1 to 7 on the child and proceed further until the validation fails or the answer is obtained.

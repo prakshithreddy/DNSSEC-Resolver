@@ -1,0 +1,96 @@
+###USING ROOT SERVERS
+EXPERIMENT-1
+
+google.com 		0.173799991608
+youtube.com 	0.173199987411
+facebook.com 	0.172300004959
+baidu.com 		0.66970000267
+wikipedia.org	0.336500000954
+reddit.com 		0.188199996948
+yahoo.com 		0.186100006104
+google.co.in 	0.544099998474
+Qq.com 			0.41210000515
+Toabao.com 		0.35150001049
+amazon.com 		0.181700015068
+Tmall.com 		0.239299988747
+Twitter.com 	0.175999999046
+google.co.jp 	0.533400011063
+instagram.com 	0.399000000954
+live.com 		0.201699995995
+Vk.com 			0.711500000954
+Sohu.com 		0.633599996567
+Sina.com.cn 	0.900500011444
+jd.com 			0.442299985886
+Weibo.com 		0.625800013542
+360.cn 			1.03929998875
+google.de 		0.480599999428
+google.co.uk 	0.398200011253
+google.com.br 	0.498600006104
+
+###USING LOCAL DNS SEREVER  (LOCAL DNS SERVER IP = 207.244.82.25)
+EXPERIMENT-2
+
+google.com 		0.0175000190735
+youtube.com 	0.0159999847412
+facebook.com 	0.0156000137329
+baidu.com 		0.0157999992371
+wikipedia.org 	0.0157999992371
+reddit.com 		0.0172999858856
+yahoo.com 		0.015499997139
+google.co.in 	0.0153000116348
+Qq.com 			0.0168999910355
+Toabao.com 		0.0148999929428
+amazon.com 		0.0160000085831
+Tmall.com 		0.0173999786377
+Twitter.com 	0.0217000007629
+google.co.jp 	0.0177000045776
+instagram.com 	0.031500005722
+live.com 		0.0177000045776
+Vk.com 			0.0162999868393
+Sohu.com 		0.0207000017166
+Sina.com.cn 	0.0161000013351
+jd.com 			0.0149000167847
+Weibo.com 		0.0147000074387
+360.cn 			0.0151999950409
+google.de 		0.015499997139
+google.co.uk 	0.0157999992371
+google.com.br 	0.227300000191
+
+###USING GOOGLE DNS SERVERS (GOOGLE DNS SERVER IP = 8.8.8.8)
+EXPERIMENT-3
+
+google.com 		0.0452000141144
+youtube.com 	0.0328999996185
+facebook.com 	0.0200999975204
+baidu.com 		0.0203999996185
+wikipedia.org 	0.0486999988556
+reddit.com 		0.0242000102997
+yahoo.com 		0.0197999954224
+google.co.in 	0.0272000074387
+Qq.com 			0.0208999872208
+Toabao.com 		0.0509999990463
+amazon.com 		0.0432000160217
+Tmall.com 		0.0521999835968
+Twitter.com 	0.0219000101089
+google.co.jp 	0.0286000013351
+instagram.com 	0.224000000954
+live.com 		0.0189999818802
+Vk.com 			0.022000002861
+Sohu.com 		0.171399998665
+Sina.com.cn 	0.173500013351
+jd.com 			0.13029999733
+Weibo.com 		0.0226999998093
+360.cn 			0.160199999809
+google.de 		0.0253999948502
+google.co.uk 	0.027999997139
+google.com.br 	0.0266999959946
+
+
+OBSERVATIONS:
+~~~~~~~~~~~~
+
+From the graph we can observe that mydig tool takes more time than the google dns resolver and the local dns resolver. It might be that google and dns resolver caches the results and
+this is responsible for their fast response. 
+Local DNS resolver and Google DNS resolver are almost gauranteed to respond within 0.2 sec.
+Also with 95% probability, mydig will also respond within 0.7 seconds. 
+With 95% probability, local DNS resolver will respond within 0.1 sec.

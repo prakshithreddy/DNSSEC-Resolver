@@ -1,0 +1,70 @@
+PART-A:
+
+$python mydig.py www.google.com A
+
+	;QUESTION
+	google.com. IN A
+
+	;ANSWER
+	google.com. 300 IN A 173.194.219.138
+	google.com. 300 IN A 173.194.219.102
+	google.com. 300 IN A 173.194.219.100
+	google.com. 300 IN A 173.194.219.101
+	google.com. 300 IN A 173.194.219.139
+	google.com. 300 IN A 173.194.219.113
+
+	Query Time: 256.000041962ms
+	WHEN: Mon Feb 19 18:41:19 2018
+	MSG SIZE rcvd: 330
+
+$python mydig.py google.com NS
+
+	;QUESTION
+	google.com. IN A
+
+	;ANSWER
+	google.com. 300 IN A 173.194.219.138
+	google.com. 300 IN A 173.194.219.102
+	google.com. 300 IN A 173.194.219.100
+	google.com. 300 IN A 173.194.219.101
+	google.com. 300 IN A 173.194.219.139
+	google.com. 300 IN A 173.194.219.113
+
+	Query Time: 256.000041962ms
+	WHEN: Mon Feb 19 18:41:19 2018
+	MSG SIZE rcvd: 330
+	
+$python mydig.py google.com MX
+
+	;QUESTION
+	google.com. IN MX
+
+	;ANSWER
+	google.com. 600 IN MX 40 alt3.aspmx.l.google.com.
+	google.com. 600 IN MX 50 alt4.aspmx.l.google.com.
+	google.com. 600 IN MX 10 aspmx.l.google.com.
+	google.com. 600 IN MX 20 alt1.aspmx.l.google.com.
+	google.com. 600 IN MX 30 alt2.aspmx.l.google.com.
+
+	Query Time: 348.999977112ms
+	WHEN: Mon Feb 19 18:42:51 2018
+	MSG SIZE rcvd: 883
+	
+	
+---------------------------------------------------------	
+	
+PART-B:
+
+$python mydnssecresolver.py www.dnssec.com
+
+	IPAddress of www.dnssec.com =  216.87.148.114
+	
+$python mydnssecresolver.py www.google.com
+	
+	DNSSEC not supported
+	
+$python mydnssecresolver.py www.dnssec-failed.org
+
+	DNSSec verification failed
+	
+-----------------------------------------------------------
