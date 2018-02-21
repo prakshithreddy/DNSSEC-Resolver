@@ -26,7 +26,20 @@ PART-B(mydnssecresolver.py - Secure resolver):
 	
 	Implementation of secure resolver is documented in PartB_implementation.txt .
 	
+----------------------------------------------
+	
 PART-C(Analysis):
 ~~~~~~
-	My DNS Resolver is compared with the local DNS resolver and Google DNS Resolver(8.8.8.8) and CDF is plotted for analysis as CDF.png. Obeservations from the CDF are documented in PartC_results.txt.
+	
+	My DNS Resolver is compared with the local DNS resolver and Google DNS Resolver(8.8.8.8) and CDF is plotted for analysis as CDF.png.
+	Obeservations from the CDF are documented in PartC_results.txt.
+	
+Other Useful Resources:
+~~~~~~~~~~~~~~~~~~~~~~
+
+	Understand how DNSSEC works - https://www.cloudflare.com/dns/dnssec/how-dnssec-works/
+
+	Check correctness of each website using - https://dnssec-debugger.verisignlabs.com/
+	
+	
 	
